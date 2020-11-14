@@ -1,0 +1,24 @@
+{
+  "name": "ipgrab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JandJ101/IPgrab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JandJ101/IPgrab/issues"
+  },
+  "homepage": "https://github.com/JandJ101/IPgrab#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
