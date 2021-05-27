@@ -1,10 +1,38 @@
 <html>
-<head>
-<script>
-    console.log("hi");
-    </script>
-</head>
-<body>
 
+<head>
+    <script>
+        function getBaseUrl() {
+            var re = new RegExp(/^.*\//);
+            return re.exec(window.location.href);
+        }
+        function convert() {
+            var url = document.getElementById("url").value;
+            var encoded = btoa(url);
+            var value = `${getBaseUrl()}r/${encoded}`;
+            document.getElementById("url").value = value;
+        }
+    </script>
+    <style>
+
+        #main {
+            width: 80%;
+            margin: 10%;
+            text-align: center;
+        }
+
+        input {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <input id="url">
+        <button onclick="convert()">convert</button>
+    </div>
 </body>
+
 </html>

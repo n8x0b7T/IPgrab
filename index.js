@@ -11,7 +11,14 @@ app.get('/r/:redirect', function (req, res){
     let url = req.params.redirect;
     console.log(url);
     console.log(req.ip + "\n")
-    res.redirect(308, url);
+
+    let buff = Buffer.from(url, 'base64');  
+    let decoded = buff.toString('utf-8').replace("\n", "");
+
+    console.log(decoded)
+
+    res.send(`<script>window.location="${decoded}"</script>`)
+    // res.redirect(308, url);
     res.end("");
 });
 
