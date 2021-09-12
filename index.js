@@ -7,6 +7,7 @@ const PORT = 3000
 //     res.redirect(307, "https://www.google.com");
 // });
 
+
 app.get('/r/:redirect', function (req, res){
     let url = req.params.redirect;
     console.log(url);

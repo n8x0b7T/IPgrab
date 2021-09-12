@@ -9,6 +9,7 @@
         function convert() {
             var url = document.getElementById("url").value;
             var encoded = btoa(url);
+            encoded = encodeURIComponent(encoded)
             var value = `${getBaseUrl()}r/${encoded}`;
             document.getElementById("url").value = value;
         }
